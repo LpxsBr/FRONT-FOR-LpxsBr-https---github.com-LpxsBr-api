@@ -5,7 +5,7 @@ export default function Register({...props}){
     // Send a POST request
 axios({
     method: 'post',
-    url: 'http://localhost:8080/users/add', 
+    url: process.env.API_HOST+"/users/add" || 'http://localhost:8080/users/add', 
     data: {
         username: props.username,
         email: props.email,
